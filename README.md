@@ -1,9 +1,9 @@
 Attached Evidence for create crypto with Solana CLI & Create Crypto with JS
 
-#For Create Crypto with JS
+# For Create Crypto with JS
 Attached Screenshot for token transaction in public folder
 
-#For Create Crypto with Solana CLI (Terminal Dump)
+# For Create Crypto with Solana CLI (Terminal Dump)
 
 $ spl-token create-token --url https://api.devnet.solana.com
 Creating token 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a
