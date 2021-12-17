@@ -1,72 +1,53 @@
+Attached Evidence for create crypto with Solana CLI & Create Crypto with JS
+
+#For Create Crypto with JS
 Attached Screenshot for token transaction in public folder
 
-# Getting Started with Create React App
+#For Create Crypto with Solana CLI (Terminal Dump)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+$ spl-token create-token --url https://api.devnet.solana.com
+Creating token 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a
 
-## Available Scripts
+Signature: 2g8Utt9Jp3p4461QP87ux3Q7Cx6UNjrnqt1rJBT5ymjNJ9Yeha9hDQi8WusYXmAnrWameS3cBc3jw6xzsetFH3FL
 
-In the project directory, you can run:
+$ spl-token create-account 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a --url https://api.devnet.solana.com
+Creating account 6BCG1GMAUpdKSDtH6mKqv2z5syxwkuRrDV4ABo4CHC3A
 
-### `yarn start`
+Signature: 2ZiH5VyP6fYsYXiVJ6nYKpcYPSRYoc5WCDfoB5e8kCEj2u8aKmBNm2Ttk66Hpw5LeFjsfJEcvJ6yNQMWDpNUm36k
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+$ spl-token balance 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a
+0
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+$ spl-token mint 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a 1000 --url https://api.devnet.solana.com
+Minting 1000 tokens
+  Token: 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a
+  Recipient: 6BCG1GMAUpdKSDtH6mKqv2z5syxwkuRrDV4ABo4CHC3A
 
-### `yarn test`
+Signature: QtYQa1AeEfQPgMGqMNM1AaqYwAWJugBQhLWNDkNnTjt5d4u7XLSrLpfNDniD9g1Xff3DVAYVK6qHrTDCzE3iZEi
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+$ spl-token supply 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a
+1000
 
-### `yarn build`
+$ spl-token authorize 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a mint --disable
+Updating 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a
+  Current mint authority: 4Nakc7ghNbXAgLEK3tx85pKo9ypUCBGNnWFWwR1eLQRF
+  New mint authority: disabled
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Signature: qhuUsEsYyga8E481WVTyNyxxjiK9x2koearGpEwCSGBBaSNRvJpECRoL5dHi9mu2ZrpNxeMbtrsgESp1WmC259D
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+$ spl-token burn 6BCG1GMAUpdKSDtH6mKqv2z5syxwkuRrDV4ABo4CHC3A 900
+Burn 900 tokens
+  Source: 6BCG1GMAUpdKSDtH6mKqv2z5syxwkuRrDV4ABo4CHC3A
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Signature: 4r1eQ6irusa6mhnS84wpdvdTaBhJTtJa3fLLkw4AxBrEzZoM2LJAHgqfCkG2WKLfmPmdJQBf3DNMkzt3jurwRe1D
 
-### `yarn eject`
+$ spl-token supply 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a
+100
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+$ spl-token transfer 83WHSH9AX4UGp1hUQqbUuGB4qJcbbCvdKPcuqMK9fb8a 69 GHWpV7hG9Y8iYSroNZTUZTazv8EGHwc8gZk2ogT6DGdt
+Transfer 69 tokens
+  Sender: 6BCG1GMAUpdKSDtH6mKqv2z5syxwkuRrDV4ABo4CHC3A
+  Recipient: GHWpV7hG9Y8iYSroNZTUZTazv8EGHwc8gZk2ogT6DGdt
+  Recipient associated token account: GWavpBfSTP653SgaLkcsRvSac77dCMh3tujFvWnRGjix
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Signature: 5QQ7KPzsScSL3yDPm1EkBkG83krrpSUzFsqTiwCbigauAiFbUunjgFHphicLkfwS7wAB7kUhAFev9CpFWcB4woVU
